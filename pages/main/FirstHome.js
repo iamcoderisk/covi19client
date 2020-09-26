@@ -158,7 +158,7 @@ export default function FirstHome(){
                         <div className="col-md-12 text-center">
                             <div className="shoppers profit">
                               <h3>11,050</h3>
-                             <p>TOTAL SALES</p>T
+                             <p>TOTAL SALES</p>
                             </div>
                         </div>
                         
@@ -178,6 +178,30 @@ export default function FirstHome(){
                         
                    </div>
                 </div>
+              </div>
+
+
+
+
+            <div className="container">
+            <div className="row justify-content-center">
+            <div className="col-md-8">
+                <div className="simple_container_2">
+                   <div className="row justify-content-center">
+                      <div className="col-md-6 text-center">
+                      <h6>TOTAL GROSS REVENUE</h6>
+                      </div>
+                   </div>
+                   <div className="row justify-content-center">
+                      <div className="col-md-12 real">
+                      <img src="./assets/img/chart1.svg" className="img-fluid" />
+
+                      </div>
+                   </div>
+                </div>
+              </div>
+
+              </div>
               </div>
 
               
