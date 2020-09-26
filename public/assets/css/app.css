@@ -1,0 +1,169 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+    background: #F3F3F3 !important;
+}
+h1,h2,h3,h4,h5{
+  color:#152C57;
+  font-family: 'Nunito', sans-serif;
+  
+}
+a,span,strong,b,li,p,label{
+  font-family: 'Raleway', sans-serif;
+  color:#6E7B95 ;
+}
+
+* {
+  box-sizing: border-box;
+}
+.color-white{
+  color:#ffffff !important;
+}
+.navbar{
+  background: transparent !important;
+}
+.navbar .nav-item .nav-link{
+  color:#6E7B95 !important;
+}
+.navbar .navbar-nav .nav-item:hover{
+  background:#152c57 !important;
+  border-bottom:2.5px solid #93e4b3 !important;
+  border-top:2.5px solid #93e4b3 !important;
+  border-radius:6px;
+  transition:0.5s ease-out;
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: #93e4b3 !important;
+}
+
+.sidebar {
+  height: 100%;
+  width: 230px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  background-color: #27073D;
+}
+.connect {
+  margin-top:80px;
+  background:#ffffff;
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-right:15px;
+  margin-left:8px;
+  border-radius:8px;
+  color:#9F72FF !important;
+  text-align: center;
+  -webkit-box-shadow: 3px 5px 5px -5px rgba(159,114,255,1);
+-moz-box-shadow: 3px 5px 5px -5px rgba(159,114,255,1);
+box-shadow: 3px 5px 5px -5px rgba(159,114,255,1);
+margin-bottom:50px;
+}
+.connect:hover{
+  cursor: pointer;
+}
+.connect p{
+  padding-top:10px;
+  color: #9F72FF !important;
+  font-size:18px;
+}
+
+
+.side_nav li {
+  width:100%;
+  float: left;
+  color: #f2f2f2;
+  height:50px;
+  padding-top:20px;
+  text-decoration: none;
+  font-size: 17px;
+  list-style: none;
+  text-align: left;
+  margin-left:0;
+  margin-right:0;
+}
+.side_nav li a{
+  padding:10px;
+  text-align: left !important;
+  text-decoration:none;
+  color: #BBB1D0 !important ;
+}
+.side_nav li a:hover{
+  background-color: #F3F3F3;
+  color: black;
+}
+
+
+.side_nav li:hover {
+  width: 100% !important;;
+  background-color:#F3F3F3;
+}
+
+.active, .side_nav li:hover {
+  background-color: #F3F3F3;
+  color: white;
+  width: 100% !important;;
+}
+.simple_container{
+  height:120px;
+  -webkit-box-shadow: 0px 1px 5px -2px rgba(159,114,255,1);
+-moz-box-shadow: 0px 1px 5px -2px rgba(159,114,255,1);
+box-shadow: 0px 1px 5px -2px rgba(159,114,255,1);
+background:#ffffff;
+border-radius:20px;
+padding:20px;
+}
+.icon_circle{
+  margin-top:15px;
+  width: 50px;
+  height: 50px;
+  background:#F3F3F3;
+  border-radius: 50%;
+  color: #9F72FF !important;
+}
+.icon_circle i {
+  margin-left:10px;
+  padding-top:20px !important;
+}
+.shoppers{
+  padding-top:20px;
+}
+.dots{
+  margin-top:-30px;
+}
+.reduced{
+  padding:3px;
+  width:30px !important;
+  height:30px !important;
+}
+.reduced img{
+  height:30px !important;
+}
+.dropdown-item  i{
+  color:#9F72FF !important;
+}
+.simple_container p {
+  font-size:10px;
+  color: #CCCACA;
+}
+
+.main_box {
+  z-index:-100;
+  margin-top: 50px;
+  margin-left:260px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* @media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} */

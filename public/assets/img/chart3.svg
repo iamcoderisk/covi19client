@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="282" height="276" viewBox="0 0 282 276">
+  <g id="Group_44" data-name="Group 44" transform="translate(-1960 -1030)">
+    <g id="Group_43" data-name="Group 43">
+      <text id="_5_" data-name="5%" transform="translate(1974 1209)" fill="#0e091a" font-size="20" font-family="Beirut"><tspan x="0" y="0">5</tspan><tspan y="0" font-family="LucidaGrande-Bold, Lucida Grande" font-weight="700">%</tspan></text>
+      <text id="_32_" data-name="32%" transform="translate(2127 1301)" fill="#0e091a" font-size="20" font-family="Beirut"><tspan x="0" y="0">32</tspan><tspan y="0" font-family="LucidaGrande-Bold, Lucida Grande" font-weight="700">%</tspan></text>
+      <text id="_15_" data-name="15%" transform="translate(2214 1156)" fill="#0e091a" font-size="20" font-family="Beirut"><tspan x="0" y="0">15</tspan><tspan y="0" font-family="LucidaGrande-Bold, Lucida Grande" font-weight="700">%</tspan></text>
+      <text id="_32.6_" data-name="32.6%" transform="translate(2158 1049)" fill="#0e091a" font-size="20" font-family="Beirut"><tspan x="0" y="0">32.6</tspan><tspan y="0" font-family="LucidaGrande-Bold, Lucida Grande" font-weight="700">%</tspan></text>
+      <text id="_15_2" data-name="15%" transform="translate(1960 1100)" fill="#0e091a" font-size="20" font-family="Beirut"><tspan x="0" y="0">15</tspan><tspan y="0" font-family="LucidaGrande-Bold, Lucida Grande" font-weight="700">%</tspan></text>
+      <g id="Group_36" data-name="Group 36">
+        <path id="Path_47" data-name="Path 47" d="M93,0A93,93,0,1,1,0,93,93,93,0,0,1,93,0Z" transform="translate(2017 1064)" fill="#9f72ff"/>
+        <path id="Subtraction_2" data-name="Subtraction 2" d="M91,115.71H33.289A93.1,93.1,0,0,1,91,0V115.709Z" transform="translate(1988 1067.291)" fill="#096923"/>
+        <path id="Subtraction_4" data-name="Subtraction 4" d="M157,192.982V25.018a93.06,93.06,0,0,1,0,167.964Z" transform="translate(1993 1048)" fill="#47ccdd"/>
+        <path id="Subtraction_3" data-name="Subtraction 3" d="M168.726,39H17.275A93.434,93.434,0,0,1,49.752,10.646a92.9,92.9,0,0,1,104.417,12.3A93.624,93.624,0,0,1,168.724,39v0h0Z" transform="translate(2017 1062)" fill="#ebdb1b"/>
+        <path id="Subtraction_5" data-name="Subtraction 5" d="M93,220a92.974,92.974,0,0,1-81.407-48H174.408a93.463,93.463,0,0,1-33.51,34.734A92.569,92.569,0,0,1,93,220Z" transform="translate(2017 1030)" fill="#47dd6f"/>
+        <circle id="Ellipse_5" data-name="Ellipse 5" cx="70" cy="70" r="70" transform="translate(2042 1087)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

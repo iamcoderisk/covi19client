@@ -1,0 +1,17 @@
+{
+  "name": "tereumapp",
+  "version": "0.1.0",
+  "homepage":"https://pichain.network",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p $PORT",
+    "heroku-postbuild":"npm run build"
+  },
+  "dependencies": {
+    "next": "^9.4.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
