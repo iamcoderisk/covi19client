@@ -112,11 +112,80 @@ export default function FirstHome(){
 
             </div>
 
-            <div className="container"><div className="row">
-              <div className="col-md-5">
+            <div className="container"><div className="row justify-content-center">
+              <div className="col-md-5 text-center">
+                <div className="gains_container">
                 <h5>GAINS</h5>
+                </div>
               </div>
             </div></div>
+
+
+            <div className="container">
+            <div className="row justify-content-center">
+            <div className="col-md-3">
+                <div className="simple_container">
+                   <div className="row">
+                        
+                        <div className="col-md-12 text-center">
+                            <div className="shoppers profit">
+                              <h3>1,050</h3>
+                              <p>MONTHLY NET PROFIT</p>
+                            </div>
+                        </div>
+                        
+                   </div>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="simple_container">
+                   <div className="row">
+                        
+                        <div className="col-md-12 text-center">
+                            <div className="shoppers profit">
+                              <h3>32,050</h3>
+                              <p>MONTHLY DAILY AVERAGE GROSS REVENUE</p>
+                            </div>
+                        </div>
+                        
+                   </div>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="simple_container">
+                   <div className="row">
+                        
+                        <div className="col-md-12 text-center">
+                            <div className="shoppers profit">
+                              <h3>11,050</h3>
+                             <p>TOTAL SALES</p>T
+                            </div>
+                        </div>
+                        
+                   </div>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="simple_container">
+                   <div className="row">
+                        
+                        <div className="col-md-12 text-center">
+                            <div className="shoppers profit">
+                              <h3>10,231</h3>
+                              <p>TOTAL CUSTOMERS THIS MONTH</p>
+                            </div>
+                        </div>
+                        
+                   </div>
+                </div>
+              </div>
+
+              
+
+            </div>
+            </div>
+
+
 
           </div>
       </div>

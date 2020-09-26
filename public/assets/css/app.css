@@ -139,6 +139,14 @@ padding:20px;
 .dots{
   margin-top:-30px;
 }
+.gains_container{
+  padding-top:40px;
+  padding-bottom:40px;
+  color:#9F72FF;
+}
+.gains_container h5,.profit p {
+  color: #9F72FF !important;
+}
 .reduced{
   padding:3px;
   width:30px !important;
