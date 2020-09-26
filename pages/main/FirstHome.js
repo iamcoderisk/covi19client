@@ -201,6 +201,22 @@ export default function FirstHome(){
                 </div>
               </div>
 
+              <div class="col-md-4">
+              <div className="simple_container_2">
+                   <div className="row justify-content-center">
+                      <div className="col-md-6 text-center">
+                      <h6>Order Value</h6>
+                      </div>
+                   </div>
+                   <div className="row justify-content-center">
+                      <div className="col-md-12 real">
+                      <img src="./assets/img/chart3.svg" className="img-fluid chart3" />
+
+                      </div>
+                   </div>
+                </div>
+              </div>
+
               </div>
               </div>
 
