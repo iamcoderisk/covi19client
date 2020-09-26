@@ -1,25 +1,5 @@
 export default function Navbar(){
-  if (typeof window !== 'undefined') {
-    
-    document.addEventListener("scroll", e => {
-      var scrolled = document.scrollingElement.scrollTop;
-      if (scrolled > 54) {
-      
-        $(".navbar").removeClass('bg-transparent')
-        $(".navbar").removeClass('transparent')
-         $(".navbar").addClass('navbar-light shadow p-3 mb-5 bg-white rounded')
-         $(".navbar").addClass('bg-light')
-      }else{
-          $(".navbar").removeClass('navbar-light shadow p-3 mb-5 bg-white rounded') 
-         $(".navbar").removeClass('bg-light')
-         $(".navbar").addClass('bg-transparent') 
-         $(".navbar").addClass('transparent') 
-         $(".navbar").addClass('navbar-light')
-         $(".navbar").addClass('bg-light')
-
-      }
-  });
-  }
+ 
  
   return(
     <div>
