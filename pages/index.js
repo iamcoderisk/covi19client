@@ -17,7 +17,7 @@ export default function Home() {
       <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet" />
       <link rel="stylesheet" href="/assets/css/bootstrap.css"/>
-      <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+      <link rel="stylesheet" href="/assets/css/ionicons.min.css" />
       
      
     </Head>

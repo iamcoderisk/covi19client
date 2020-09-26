@@ -108,8 +108,16 @@ export default function FirstHome(){
                         </div>
                    </div>
                 </div>
-              </div>              
+              </div> 
+
             </div>
+
+            <div className="container"><div className="row">
+              <div className="col-md-5">
+                <h5>GAINS</h5>
+              </div>
+            </div></div>
+
           </div>
       </div>
 
