@@ -119,8 +119,6 @@ export default function FirstHome(){
                 </div>
               </div>
             </div></div>
-
-
             <div className="container">
             <div className="row justify-content-center">
             <div className="col-md-3">
