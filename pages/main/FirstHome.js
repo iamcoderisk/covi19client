@@ -53,8 +53,8 @@ export default function FirstHome(){
                         </div>
                         <div className="col-md-6">
                             <div className="shoppers">
-                              <h3>1,050</h3>
-                              <p>Webshops</p>
+                              <h3>11,050</h3>
+                              <p>Orders</p>
                             </div>
                         </div>
                         <div className="col-md-2">
@@ -70,13 +70,13 @@ export default function FirstHome(){
                    <div className="row">
                         <div className="col-md-4">
                             <div className="icon_circle">
-                                <i className="ion-android-cart"></i>
+                                <i className="ion-bag"></i>
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="shoppers">
                               <h3>10,271</h3>
-                              <p>Orders</p>
+                              <p>Marketplaces</p>
                             </div>
                         </div>
                         <div className="col-md-2">
@@ -98,7 +98,7 @@ export default function FirstHome(){
                         <div className="col-md-6">
                             <div className="shoppers">
                               <h3>1,050</h3>
-                              <p>Marketplaces</p>
+                              <p>Others</p>
                             </div>
                         </div>
                         <div className="col-md-2">
@@ -219,6 +219,72 @@ export default function FirstHome(){
 
               </div>
               </div>
+
+
+              <div className="container">
+            <div className="row justify-content-center">
+            <div className="col-md-5">
+                <div className="simple_container_3">
+                   <div className="row justify-content-center">
+                      <div className="col-md-6 text-center">
+                      <h6>TOTAL GROSS RATE</h6>
+                      </div>
+                   </div>
+                   <div className="row justify-content-center">
+                      <div className="col-md-12 real">
+                      <img src="./assets/img/chart2.svg" className="img-fluid" />
+
+                      </div>
+                   </div>
+                </div>
+              </div>
+
+
+              <div className="col-md-3 margin-top">
+              <div className="row">
+              
+              <div className="col-md-12 form-group">
+                <div className="simple_container">
+                   <div className="row">
+                        
+                        <div className="col-md-12 text-center">
+                            <div className="shoppers profit margin">
+                              <h6>Monthly profit margin</h6>
+                             <h6>32.6%</h6>
+                            </div>
+                        </div>
+                        
+                   </div>
+                </div>
+              </div>
+              </div>
+              
+                <div className="row">
+                  <br />
+                <div className="col-md-12 form-group">
+                <div className="simple_container">
+                   <div className="row">
+                        
+                        <div className="col-md-12 text-center">
+                            <div className="shoppers profit margin">
+                            <h6>Next profit margin</h6>
+                             <h6>12.6%</h6>
+                            </div>
+                        </div>
+                        
+                   </div>
+                </div>
+              </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+              <div className="simple_container_4">
+                   
+                </div>
+              </div>
+
+              </div>
+            </div>
 
               
 
