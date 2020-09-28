@@ -1,17 +1,22 @@
 {
   "name": "tereumapp",
   "version": "0.1.0",
-  "homepage":"https://pichain.network",
+  "homepage": "https://pichain.network",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
-    "heroku-postbuild":"npm run build"
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
+    "axios": "^0.20.0",
+    "google-map-react": "^2.1.6",
     "next": "^9.4.4",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-google-maps": "^9.4.5",
+    "react-notifications-component": "^2.4.1",
+    "react-progress-2": "^4.4.3"
   }
 }

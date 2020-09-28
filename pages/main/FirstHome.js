@@ -1,299 +1,210 @@
 import Link from 'next/link'
-export default function FirstHome(){
-  return(
-    <div className="main">
-      <div className="sidebar">
-          <div className="connect">
-            <p>Connect Shop <i className="ion-plus"></i></p>
+import React, { useState,Component } from 'react';
+import ReactNotification from 'react-notifications-component'
+import { store } from 'react-notifications-component';
+import axios from 'axios';
+import Progress from "react-progress-2";
+import { compose, withProps } from "recompose"
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+const MyMapComponent = withScriptjs(withGoogleMap((props) =>
+  <GoogleMap
+    defaultZoom={8}
+    defaultCenter={{ lat: 	6.637636799999999, lng: 	3.3558156 }}
+  >
+    {props.isMarkerShown && <Marker position={{ lat: 	6.637636799999999, lng: 	3.3558156 }} />}
+  </GoogleMap>
+))
+
+// const Results = () => (
+  
+// )
+  
+class FirstHome extends Component { 
+
+  componentDidMount(){
+    
+    if(typeof window !=='undefined'){
+      var header = document.getElementById("myDIV");
+      var btns = header.getElementsByClassName("btn-1");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active-1");
+        current[0].className = current[0].className.replace(" active-1", "");
+        this.className += " active-1";
+        });
+  }
+    }
+  }
+ 
+   state = {
+    from: "",
+    to: ""
+   };
+   handleChange = (event)=>{
+    const target =  event.target;
+    const name = target.name;
+    const value =  target.value;
+
+    this.setState({
+        [name]: value
+    })
+
+};
+submit = (event) =>{
+      Progress.show();
+      event.preventDefault();
+         const payload = {
+              from: this.state.from,
+              to: this.state.to
+          };
+          axios({
+                method: 'POST',
+                url: 'https://covi19server.herokuapp.com/patients/list',
+                data:payload,
+                headers:{
+                  'Content-Type': 'Application/json'
+                }
+            }).then(res => {
+                console.log(res.data)
+  
+            }).catch(function(error) {
+              
+            })
+  
+    }
+       
+      
+     
+
+    render(){
+
+      return(
+      
+      
+        <div className="main">
+            <Progress.Component/>
+              <ReactNotification />
+          <div className="sidebar">
+              <div className="connect">
+                <h5>COVID-19 Online Assessment Tracker</h5>
+              </div>
+          <form onSubmit={this.submit}>
+              <div className="side_nav">
+                <div className="sorter">
+                <p>Reported:</p>
+                <div id="myDIV">
+    <button class="btn-1">Today </button>
+    <button class="btn-1 active-1">Last Two Weeks</button>
+    <button class="btn-1">Last 30 Days</button>
+    <button class="btn-1" onClick={this.onClick}>Custom Range</button>
+     
+        
+  </div>
+  
+  <div className="date_holder">
+        <div className="row">
+          <div className="col-md-12">
+          <div className="form-group">
+            <input type="date" className="form-control col-md-12" name="from"  value={this.state.from} onChange={this.handleChange} />
           </div>
-
-          <ul className="side_nav">
-            <li class="side_n active"><a href="#"><i className="ion-grid"></i> Dashboard</a></li>
-            <li class="side_n"><a href="#"><i className="ion-ios-cloud-upload"></i> Upload Feed</a></li>
-            <li class="side_n"><a href="#"><i className="ion-bag"></i> Add Marketplaces</a></li>
-            <li class="side_n"><a href="#"><i className="ion-ios-pricetags"></i> Products</a></li>
-            <li class="side_n"><a href="#"><i className="ion-android-cart"></i> Order</a></li>
-            <li class="side_n"><a href="#"><i className="ion-gear-b"></i> Settings</a></li>
-          </ul>
-
-      </div>
-      <div className="main_box">
-          <div className="container">
-            <div className="row justify-content-center">
-            <div className="col-md-3">
-                <div className="simple_container">
-                   <div className="row">
-                        <div className="col-md-4">
-                            <div className="icon_circle">
-                                <i className="ion-android-cart"></i>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="shoppers">
-                              <h3>1,050</h3>
-                              <p>Webshops</p>
-                            </div>
-                        </div>
-                        <div className="col-md-2">
-                        <div className="dots">
-                        <img src="./assets/img/dots.svg" className="img-fluid" />
-                        </div>
-                        </div>
-                   </div>
-                </div>
-              </div>
-
-              <div className="col-md-3">
-                <div className="simple_container">
-                   <div className="row">
-                        <div className="col-md-4">
-                            <div className="icon_circle">
-                                <i className="ion-android-cart"></i>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="shoppers">
-                              <h3>11,050</h3>
-                              <p>Orders</p>
-                            </div>
-                        </div>
-                        <div className="col-md-2">
-                        <div className="dots">
-                        <img src="./assets/img/dots.svg" className="img-fluid" />
-                        </div>
-                        </div>
-                   </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="simple_container">
-                   <div className="row">
-                        <div className="col-md-4">
-                            <div className="icon_circle">
-                                <i className="ion-bag"></i>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="shoppers">
-                              <h3>10,271</h3>
-                              <p>Marketplaces</p>
-                            </div>
-                        </div>
-                        <div className="col-md-2">
-                        <div className="dots">
-                        <img src="./assets/img/dots.svg" className="img-fluid" />
-                        </div>
-                        </div>
-                   </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="simple_container">
-                   <div className="row">
-                        <div className="col-md-4">
-                            <div className="icon_circle">
-                                <i className="ion-ios-barcode-outline"></i>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="shoppers">
-                              <h3>1,050</h3>
-                              <p>Others</p>
-                            </div>
-                        </div>
-                        <div className="col-md-2">
-                        <div className="dots">
-                        <img src="./assets/img/dots.svg" className="img-fluid" />
-                        </div>
-                        </div>
-                   </div>
-                </div>
-              </div> 
-
-            </div>
-
-            <div className="container"><div className="row justify-content-center">
-              <div className="col-md-5 text-center">
-                <div className="gains_container">
-                <h5>GAINS</h5>
-                </div>
-              </div>
-            </div></div>
-            <div className="container">
-            <div className="row justify-content-center">
-            <div className="col-md-3">
-                <div className="simple_container">
-                   <div className="row">
-                        
-                        <div className="col-md-12 text-center">
-                            <div className="shoppers profit">
-                              <h3>1,050</h3>
-                              <p>MONTHLY NET PROFIT</p>
-                            </div>
-                        </div>
-                        
-                   </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="simple_container">
-                   <div className="row">
-                        
-                        <div className="col-md-12 text-center">
-                            <div className="shoppers profit">
-                              <h3>32,050</h3>
-                              <p>MONTHLY DAILY AVERAGE GROSS REVENUE</p>
-                            </div>
-                        </div>
-                        
-                   </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="simple_container">
-                   <div className="row">
-                        
-                        <div className="col-md-12 text-center">
-                            <div className="shoppers profit">
-                              <h3>11,050</h3>
-                             <p>TOTAL SALES</p>
-                            </div>
-                        </div>
-                        
-                   </div>
-                </div>
-              </div>
-              <div className="col-md-3">
-                <div className="simple_container">
-                   <div className="row">
-                        
-                        <div className="col-md-12 text-center">
-                            <div className="shoppers profit">
-                              <h3>10,231</h3>
-                              <p>TOTAL CUSTOMERS THIS MONTH</p>
-                            </div>
-                        </div>
-                        
-                   </div>
-                </div>
-              </div>
-
-
-
-
-            <div className="container">
-            <div className="row justify-content-center">
-            <div className="col-md-8">
-                <div className="simple_container_2">
-                   <div className="row justify-content-center">
-                      <div className="col-md-6 text-center">
-                      <h6>TOTAL GROSS REVENUE</h6>
-                      </div>
-                   </div>
-                   <div className="row justify-content-center">
-                      <div className="col-md-12 real">
-                      <img src="./assets/img/chart1.svg" className="img-fluid" />
-
-                      </div>
-                   </div>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-              <div className="simple_container_2">
-                   <div className="row justify-content-center">
-                      <div className="col-md-6 text-center">
-                      <h6>Order Value</h6>
-                      </div>
-                   </div>
-                   <div className="row justify-content-center">
-                      <div className="col-md-12 real">
-                      <img src="./assets/img/chart3.svg" className="img-fluid chart3" />
-
-                      </div>
-                   </div>
-                </div>
-              </div>
-
-              </div>
-              </div>
-
-
-              <div className="container">
-            <div className="row justify-content-center">
-            <div className="col-md-5">
-                <div className="simple_container_3">
-                   <div className="row justify-content-center">
-                      <div className="col-md-6 text-center">
-                      <h6>TOTAL GROSS RATE</h6>
-                      </div>
-                   </div>
-                   <div className="row justify-content-center">
-                      <div className="col-md-12 real">
-                      <img src="./assets/img/chart2.svg" className="img-fluid" />
-
-                      </div>
-                   </div>
-                </div>
-              </div>
-
-
-              <div className="col-md-3 margin-top">
-              <div className="row">
-              
-              <div className="col-md-12 form-group">
-                <div className="simple_container">
-                   <div className="row">
-                        
-                        <div className="col-md-12 text-center">
-                            <div className="shoppers profit margin">
-                              <h6>Monthly profit margin</h6>
-                             <h6>32.6%</h6>
-                            </div>
-                        </div>
-                        
-                   </div>
-                </div>
-              </div>
-              </div>
-              
-                <div className="row">
-                  <br />
-                <div className="col-md-12 form-group">
-                <div className="simple_container">
-                   <div className="row">
-                        
-                        <div className="col-md-12 text-center">
-                            <div className="shoppers profit margin">
-                            <h6>Next profit margin</h6>
-                             <h6>12.6%</h6>
-                            </div>
-                        </div>
-                        
-                   </div>
-                </div>
-              </div>
-                </div>
-              </div>
-              <div className="col-md-4">
-              <div className="simple_container_4">
-                   
-                </div>
-              </div>
-
-              </div>
-            </div>
-
-              
-
-            </div>
-            </div>
-
-
-
           </div>
+        </div>
+  
+        <div className="row">
+          <div className="col-md-12">
+          <div className="form-group">
+            <input type="date" className="form-control col-md-12"  name="to"  value={this.state.to} onChange={this.handleChange} />
+          </div>
+        
+          </div>
+        </div>
       </div>
-
+      <p>Symtom(s):</p>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+    <label class="form-check-label" for="defaultCheck1">
+    Extreme difficulty breathing, chest pain, difficulty waking up or disorientation
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" />
+    <label class="form-check-label" for="defaultCheck2">
+    Serious problems breathing
+    </label>
+  </div>
+  
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" />
+    <label class="form-check-label" for="defaultCheck2">
+    Healthcare Worker
+      </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" />
+    <label class="form-check-label" for="defaultCheck2">
+    Moderate Symptoms like fever, cough, sore throat or runny nose
+      </label>
+  </div>
+  
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" />
+    <label class="form-check-label" for="defaultCheck2">
+    Close contact with Covid-19 patients
+      </label>
+  </div>
+  
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" />
+    <label class="form-check-label" for="defaultCheck2">
+    Foreign Travel History
+      </label>
+  </div>
+  
+  
+    <div className="row justify-content-left">
+      <div className="col-md-12 text-left">
+      <button type="submit" className="btn btn-danger col-md-12">Search </button>
+      </div>
     </div>
-  );
-}
+    
+  
+  
+    <br />
+    <br />
+    <br />
+  
+  
+  
+                </div>
+              </div>
+              </form>
+    
+          </div>
+          
+          <div className="main_box">
+            <div className="container">
+              <div className="row justify-content-center">
+                  <div className="col-md-12">
+  
+                  <MyMapComponent 
+                     isMarkerShown
+    googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCObOkQ6gpWnXFszHoGbuqTPQxALHhBTGY"
+    loadingElement={<div style={{ height: `100%` }} />}
+    containerElement={<div style={{ height: `500px` }} />}
+    mapElement={<div style={{ height: `100%` }} />}
+                   />
+                  </div>
+              </div>
+            </div>
+          </div>
+    
+    
+         
+        </div>
+      );
+    }
+  }  
+
+
+
+export default FirstHome
